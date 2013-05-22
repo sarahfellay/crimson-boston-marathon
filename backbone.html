@@ -1,6 +1,7 @@
 <html>
 <head>
 	<script type="text/javascript" src="jquery.js"></script>
+	<script type="text/javascript" src="raphael.js"></script> 
 	<script type="text/javascript" src="scrolling.js"></script>
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<link href='http://fonts.googleapis.com/css?family=Noticia+Text:400,700' rel='stylesheet' type='text/css'>
@@ -25,7 +26,7 @@
 		<div id='finish_line'></div>
 
 		<div id='main_content'>			
-			<div class='event' id='6:00AM'>
+			<div class='event' data-time='6:00' data-date='4/15/2013'>
 				<div class='ss-left'>
 					<img src='resources/placeholder1.jpg'>
 				</div>
@@ -36,7 +37,7 @@
 				</div>
 			</div>
 
-			<div class='event' id='6:43 AM'>
+			<div class='event' data-time='6:43' data-date='4/15/2013'>
 
 				<div class='ss-left'>
 					<h2>Second event</h2>
@@ -51,7 +52,7 @@
 				</div>
 			</div>
 
-			<div class='event' id='7:00 AM'>
+			<div class='event' data-time='7:00' data-date='4/15/2013'>
 				<div class='ss-left'>
 					<img src='resources/placeholder2.jpg'>
 					<h5>Name of person speaking in video</h5>
@@ -64,7 +65,7 @@
 				</div>
 			</div>
 
-			<div class='event' id='7:30 AM'>
+			<div class='event' data-time='7:30' data-date='4/15/2013'>
 				<div class='ss-left'>
 					<h2>Fourth event</h2>
 					<p>Aenean quis enim vel lacus rutrum dignissim convallis id justo. Vivamus pretium consectetur tortor vitae rutrum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Curabitur ultrices sem at tellus dignissim ac egestas dolor eleifend. Praesent adipiscing, tellus a rhoncus condimentum, odio velit sollicitudin tellus, sit amet auctor nibh sem nec arcu. In hac habitasse platea dictumst. Pellentesque ultricies condimentum dictum. Suspendisse vel tellus at eros ultricies posuere quis et tellus. Curabitur in magna sodales nunc tempus rutrum non in dolor. Quisque non justo id turpis adipiscing semper id in ante. Sed suscipit nisi malesuada turpis hendrerit in pretium erat pulvinar. Nam imperdiet nulla et enim rutrum aliquam. Pellentesque quis nisl in dui hendrerit egestas.
@@ -77,12 +78,15 @@
 				</div>
 			</div>
 
-			<div class='event' id='N/A'></div> <!--Empty div to ensure clock updates on last paragraph-->
+			<div class='event' data-time='8:00' data-date='4/15/2013'></div> <!--Empty div to ensure clock updates on last paragraph-->
 		</div>
 		
 
-		<div id='clock'>
-			<p>6:00AM</p>		
+		<div id="clock">
+		<script>draw_clock();</script>
+		<br>
+		<div id="timestamp"></div>
+		<div id="datestamp"></div>
 		</div>
 	</div>
 	<div id='caution_tape'></div>
